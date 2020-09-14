@@ -1,0 +1,53 @@
+import Project.League;
+import Project.Manager;
+import Project.Name;
+import Project.Player;
+import Project.Team;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+
+	League league1 = new League();
+	
+	
+	Team team1 = new Team("Red"); 
+	Team team2 = new Team("Blue");
+	
+	
+	Name name1 = new Name("James", "Patrick", "Franloe");
+	Name name2 = new Name("Mike", "John", "Lenord");
+	Manager manager1 = new Manager(name1, "0872941956", "james@gmail.com", "30/10/1950", 9);
+	Manager manager2 = new Manager(name2, "0858729271", "mike@gmail.com", "12/07/1972", 6);
+
+	
+	Name name3 = new Name("Frank", "Patrick", "Jones");
+	Name name4 = new Name("Ben", "James", "O'Neill");
+	Name name5 = new Name("Mark", "Matthew", "Smith");
+	Name name6 = new Name("Aaron", "Anthony", "Barrett");
+	Player player1 = new Player(name3, "0878529122", "Frank@gmail.com", true);
+	Player player2 = new Player(name4, "0862516293", "Ben@gmail.com", false);
+	Player player3 = new Player(name5, "0218452915", "Mark@gmail.com", false);
+	Player player4 = new Player(name6, "0892831512", "Aaron@gmail.com", true);
+
+
+	System.out.println(team1.addPlayer(player1));
+	System.out.println(team1.addPlayer(player2));
+	System.out.println(team2.addPlayer(player3));
+	System.out.println(team2.addPlayer(player4));
+	player1.setGoals(2);
+	player2.setGoals(5);
+	player3.setGoals(12);
+	player4.setGoals(8);
+	
+	System.out.println(team1.addManager(manager1));
+	System.out.println(team1.addManager(manager2));
+	System.out.println(team2.addManager(manager2));
+	
+	System.out.println(league1.addTeam(team1));
+	System.out.println(league1.addTeam(team2));
+
+	league1.print();
+	}
+}

@@ -1,0 +1,20 @@
+package Project;
+
+import java.sql.*;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			// 1. Get a connection to database
+			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/league", "root", "mypass");
+			
+		}
+		catch(Exception exc) {
+			exc.printStackTrace();
+		}
+
+	}
+
+}

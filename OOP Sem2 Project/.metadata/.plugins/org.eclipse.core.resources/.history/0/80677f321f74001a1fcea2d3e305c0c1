@@ -1,0 +1,38 @@
+package OOP Sem2 Project;
+
+public class Manager extends Person  {
+	
+	private String dateofbirth;
+	private int starrating;
+	
+	public Manager(Name name, String phone, String email, String dateofbirth, int starrating) {
+		super(name, phone, email);
+		this.dateofbirth = dateofbirth;
+		this.starrating = starrating;
+	}
+	
+	public void setDateofbirth(String dateofbirth) {
+		this.dateofbirth = dateofbirth;
+	}
+	
+	public String getDateofbirth() {
+		return dateofbirth;
+	}
+	
+	public void setStarrating(int starrating) {
+		this.starrating = starrating;
+	}
+	
+	public int getStarrating() {
+		return starrating;
+	}
+	 
+	
+	public String toString() {
+		return getName() + ", " + getPhone() + ", " + getEmail() + ", " + dateofbirth + ", " + starrating;
+	}
+	
+	public void print() {
+		System.out.println(toString());
+	}
+}
